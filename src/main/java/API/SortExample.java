@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class SortExample {
     private static Comparable[] aux;
-
     //小于
     private static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) < 0;
