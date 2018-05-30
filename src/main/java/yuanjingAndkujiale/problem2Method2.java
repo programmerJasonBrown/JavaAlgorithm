@@ -1,4 +1,4 @@
-package yuanjing;
+package yuanjingAndkujiale;
 
 public class problem2Method2 {
 

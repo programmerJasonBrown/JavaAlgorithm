@@ -1,4 +1,4 @@
-package yuanjing;
+package yuanjingAndkujiale;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -31,7 +31,9 @@ public class Probelm3Lan {
     public static void main(String[] args) {
 
         try {
-            Scanner scanner = new Scanner(new File("a.csv"));
+            Scanner scanner = new Scanner(new File("a.txt"));
+            String s = scanner.nextLine();//  从文件a.txt中读取一行数据
+
 
             ArrayList<Node> lists = new ArrayList<>();
             while (scanner.hasNextLine()) {
@@ -57,11 +59,8 @@ public class Probelm3Lan {
     public static void process1(ArrayList<Node> lists) throws IOException {
         FileWriter writer = new FileWriter("b.csv");
         BufferedWriter bw = new BufferedWriter(writer);
-        for (Node x : lists) {
-            System.out.println(x.rank + "," + x.name);
-//            保存到新文件b.csv
-            bw.write(x.rank + "," + x.name + "\r\n");
-        }
+        bw.write("内容" + "\r\n");
+
         bw.close();
     }
 
