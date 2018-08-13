@@ -32,9 +32,7 @@ public class MyBag {
 //        for (int i = 0; i < 11; i++) {
 //            System.out.println(i + " " + mycc[i]);
 //        }
-//        for (int i = 0; i < 11; i++) {
-//            System.out.print(c[3][i] + " ");
-//        }
+
 
 
     }
