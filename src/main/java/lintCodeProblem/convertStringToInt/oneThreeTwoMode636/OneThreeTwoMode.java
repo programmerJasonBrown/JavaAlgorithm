@@ -1,11 +1,7 @@
 package lintCodeProblem.convertStringToInt.oneThreeTwoMode636;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.nio.Buffer;
-import java.util.Scanner;
+import org.omg.CORBA.INTERNAL;
+
 import java.util.Stack;
 
 /*
@@ -15,39 +11,36 @@ n 会小于 20,000。
 *
 * */
 public class OneThreeTwoMode {
-    public boolean find132pattern(int[] nums) {
+//    public boolean find132pattern(int[] nums) {
+////        int third = Integer.MIN_VALUE;
+////        Stack<Integer> stack = new Stack<Integer>();
+////        for (int i = nums.length - 1; i >= 0; i--) {
+////            if (nums[i]<third)   //只要找到第一个数就ok了
+////                return true;
+////            else while (!stack.empty() && nums[i] > stack.peek()) {
+////                third = stack.pop();
+////            }
+////            stack.push(nums[i]);  //如果nums[i]小于栈顶，但是大于third直接压栈
+////        }
+////        return false;
+////    }
+
+    public static boolean is132pattern(int[] nums) {
         int third = Integer.MIN_VALUE;
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         for (int i = nums.length - 1; i >= 0; i--) {
-            if (nums[i]<third)   //只要找到第一个数就ok了
+            if (nums[i] < third)
                 return true;
-            else while (!stack.empty() && nums[i] > stack.peek()) {
+            else if (!stack.isEmpty() && nums[i] > stack.peek()){
                 third = stack.pop();
             }
-            stack.push(nums[i]);  //如果nums[i]小于栈顶，但是大于third直接压栈
+            stack.push(nums[i]);
         }
         return false;
     }
 
 
     public static void main(String[] args) {
-        OneThreeTwoMode oneThreeTwoMode = new OneThreeTwoMode();
-        File file = new File("E:\\jianGuoTongBu\\javaproject\\maven\\algorithm\\src\\main\\resources\\636OneThreeTwoMode");
-        BufferedReader bf = null;
-        String[] splits = null;
-        int length = 0;
-        try {
-            bf = new BufferedReader(new FileReader(file));
-            String str = bf.readLine();
-            splits = str.split("\\s|,");
-            length = splits.length;
-        } catch (java.io.IOException e) {
-            e.printStackTrace();
-        }
-        int a[] = new int[length];
-        for (int i = 0; i < length; i++) {
-            a[i] = Integer.parseInt(splits[i]);
-        }
-        System.out.println(oneThreeTwoMode.find132pattern(a));
+
     }
 }

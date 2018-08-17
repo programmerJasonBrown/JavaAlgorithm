@@ -1,6 +1,7 @@
 package test2;
 
 import org.junit.Test;
+import splitTest.Test2;
 
 public class Test2Test {
     @Test

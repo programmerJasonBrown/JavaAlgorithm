@@ -1,4 +1,4 @@
-package test2;
+package splitTest;
 
 public class Test2 {
     public String reverseWords(String s) {

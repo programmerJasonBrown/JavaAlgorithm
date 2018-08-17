@@ -72,6 +72,7 @@ public class LRUCache {
         if (length >= capacity) {
             //删除链表末尾的数据
             Node temp = head;
+            //这里没有考虑容量只有1的情况
             while(temp.next.next!=null){
                 temp = temp.next;
             }
